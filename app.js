@@ -45,11 +45,24 @@ app.post("/register", function(req, res){
       if (err){
         console.log(err);
       }
-      // else if(req.body.username === "fisher@ya.com"){
-      //   res.render("friends", {
-      //     textOne: "Привет Игорёк!"
-      //   });
-      // }
+      else if(req.body.username === "igortsvelykh@gmail.com"){
+        res.render("friends", {
+          img: "igor.jpg",
+          textOne: "Привет, Игорёк!"
+        });
+      }
+      else if(req.body.username === "sheingart.max@gmail.com"){
+        res.render("friends", {
+          img: "max.jpg",
+          textOne: "Привет, Максимка!"
+        });
+      }
+      else if(req.body.username === "jushangart@gmail.com"){
+        res.render("friends", {
+          img: "jura.jpg",
+          textOne: "Привет, Хитрый Жир!"
+        });
+      }
       else {
         res.render("secrets");
       }
